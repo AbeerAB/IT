@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register_to_app">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout"
+        tools:ignore="MissingConstraints">
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="25dp"
+        android:paddingTop="10dp"
+        android:paddingRight="25dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/background11"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
+            android:textColorHint="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.541"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            android:backgroundTint="#8CCED1"
+            android:ems="10"
+            android:hint="اسم المستخدم"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/editText4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
+            android:textColorHint="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.541"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            android:backgroundTint="#8CCED1"
+            android:ems="10"
+            android:hint="الرقم السري"
+            android:inputType="textPassword"
+            android:visibility="visible" />
+
+        <EditText
+            android:id="@+id/editText7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
+            android:textColorHint="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.541"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            android:backgroundTint="#8CCED1"
+            android:ems="10"
+            android:hint="تأكيد الرقم السري"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/editText5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
+            android:textColorHint="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.541"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            android:backgroundTint="#8CCED1"
+            android:ems="10"
+            android:hint="البريد الإلكتروني"
+            android:inputType="textEmailAddress"
+            android:paddingBottom="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="المستخدم : هو من يستطيع طرح الأسئلة فقط"
+            android:textColor="#9E2B2B"
+            android:textSize="15dp"
+            android:paddingLeft="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            android:text="الخبير : هو من يستطيع الإجابة عن الأسئلة وطرحها"
+            android:textColor="#9E2B2B"
+            android:textSize="15dp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:checkedButton="@+id/radioGroupGender"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/user"
+                android:layout_width="114dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/roundbutton2"
+                android:onClick="onClickedUser"
+                android:text="@string/user" />
+
+            <RadioButton
+                android:id="@+id/expuser"
+                android:layout_width="114dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/roundbutton2"
+                android:onClick="onClickedExp"
+                android:text="@string/exp" />
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="اختر الخبرة"
+            android:paddingTop="20dp"
+            android:textColor="#111"
+            android:textSize="15dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/prog1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="C++" />
+
+            <CheckBox
+                android:id="@+id/prog2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Java" />
+
+            <CheckBox
+                android:id="@+id/prog3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CSS" />
+
+            <CheckBox
+                android:id="@+id/prog4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="C#" />
+
+            <CheckBox
+                android:id="@+id/prog5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PHP" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/other"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
+            android:textColorHint="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.541"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            android:backgroundTint="#8CCED1"
+            android:layout_marginTop="10dp"
+            android:hint="أخرى"
+            android:inputType="textPersonName"
+            android:lines="4" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/roundbutton2"
+            android:radius="1dp"
+            android:text="تسجيل"
+            android:textColor="#111" />
+
+        <TextView
+            android:id="@+id/loginTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:textStyle="bold"
+            android:text=" أنت مسجل سابقا ؟ تسجيل الدخول"
+            android:textColor="#111"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

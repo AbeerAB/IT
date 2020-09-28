@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name"> مبرمجين </string>
+    <string name="user">مستخدم</string>
+    <string name="exp">خبير</string>
+
+
+    <string-array name="array">
+        <item>c++</item>
+        <item>java</item>
+        <item> asp </item>
+        <item>c#</item>
+        <item>" "</item>
+
+    </string-array>
+    <string name="title_activity_navigation_drawer">navigationDrawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">خدمات التقنية</string>
+    <string name="nav_header_subtitle">نوع المستخدم</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">logout</string>
+
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">الصفحة الرئيسية</string>
+</resources>
