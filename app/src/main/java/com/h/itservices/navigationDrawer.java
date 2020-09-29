@@ -2,6 +2,7 @@ package com.h.itservices;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
@@ -23,7 +24,7 @@ import androidx.appcompat.widget.Toolbar;
 public class navigationDrawer extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
-
+    DrawerLayout drawer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +39,7 @@ public class navigationDrawer extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+         drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
@@ -60,10 +61,12 @@ public class navigationDrawer extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId() == android.R.id.home){ // use android.R.id
+            drawer.openDrawer(Gravity.LEFT);
+        }
         switch (item.getItemId()){
             case R.id.logout:
                 FirebaseAuth.getInstance().signOut();
-                finish();
                 Intent loginActivity = new Intent(getApplicationContext(),LoginActivity.class);
                 startActivity(loginActivity);
                 break;
