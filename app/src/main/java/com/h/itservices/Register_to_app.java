@@ -32,7 +32,9 @@ public class Register_to_app extends AppCompatActivity implements View.OnClickLi
     EditText Name;
     private RadioGroup radioGroupType;
     String typ="0";
-    CheckBox prog1,prog2,prog3,prog4,prog5;
+    CheckBox prog11,prog12,prog13,prog14,prog15,prog16,prog17;
+    CheckBox prog21,prog22,prog23,prog24,prog25;
+    CheckBox prog1,prog2,prog3,prog4,prog5,prog6,prog7;
     EditText other;
     EditText password;
     EditText confirmPassword;
@@ -72,11 +74,28 @@ public class Register_to_app extends AppCompatActivity implements View.OnClickLi
 
        // toolbar.setTitleTextColor(Color.WHITE);
         other = findViewById(R.id.other);
+
+        prog11 = findViewById(R.id.prog11);
+        prog12 = findViewById(R.id.prog12);
+        prog13 = findViewById(R.id.prog13);
+        prog14 = findViewById(R.id.prog14);
+        prog15 = findViewById(R.id.prog15);
+        prog16 = findViewById(R.id.prog16);
+        prog17 = findViewById(R.id.prog17);
+
+        prog21 = findViewById(R.id.prog21);
+        prog22 = findViewById(R.id.prog22);
+        prog23 = findViewById(R.id.prog23);
+        prog24 = findViewById(R.id.prog24);
+        prog25 = findViewById(R.id.prog25);
+
         prog1 = findViewById(R.id.prog1);
         prog2 = findViewById(R.id.prog2);
         prog3 = findViewById(R.id.prog3);
         prog4 = findViewById(R.id.prog4);
         prog5 = findViewById(R.id.prog5);
+        prog6 = findViewById(R.id.prog6);
+        prog7 = findViewById(R.id.prog7);
 
         //for move to login page
         LginTextView = findViewById(R.id.loginTextView);
@@ -119,23 +138,54 @@ public class Register_to_app extends AppCompatActivity implements View.OnClickLi
 
     public void onClickedUser(View view) {
         typ="user";
+
+        prog11.setEnabled(false);
+        prog12.setEnabled(false);
+        prog13.setEnabled(false);
+        prog14.setEnabled(false);
+        prog15.setEnabled(false);
+        prog16.setEnabled(false);
+        prog17.setEnabled(false);
+
+        prog21.setEnabled(false);
+        prog22.setEnabled(false);
+        prog23.setEnabled(false);
+        prog24.setEnabled(false);
+        prog25.setEnabled(false);
+
         prog1.setEnabled(false);
         prog2.setEnabled(false);
         prog3.setEnabled(false);
         prog4.setEnabled(false);
         prog5.setEnabled(false);
+        prog6.setEnabled(false);
+        prog7.setEnabled(false);
         other.setText("");
         other.setEnabled(false);
-
-
     }
     public void onClickedExp(View view) {
         typ="exp";
+        prog11.setEnabled(true);
+        prog12.setEnabled(true);
+        prog13.setEnabled(true);
+        prog14.setEnabled(true);
+        prog15.setEnabled(true);
+        prog16.setEnabled(true);
+        prog17.setEnabled(true);
+
+        prog21.setEnabled(true);
+        prog22.setEnabled(true);
+        prog23.setEnabled(true);
+        prog24.setEnabled(true);
+        prog25.setEnabled(true);
+
         prog1.setEnabled(true);
         prog2.setEnabled(true);
         prog3.setEnabled(true);
         prog4.setEnabled(true);
         prog5.setEnabled(true);
+        prog6.setEnabled(true);
+        prog7.setEnabled(true);
 
         other.setEnabled(true);
 
@@ -208,17 +258,33 @@ public class Register_to_app extends AppCompatActivity implements View.OnClickLi
                             String id = myRef.push().getKey();
 
                             if (typ.equals("user")) {
-                                m =new Module(id,Name.getText().toString(),password.getText().toString(),email.getText().toString(),typ," "," ");
+                                m =new Module(id,Name.getText().toString(),password.getText().toString(),email.getText().toString(),typ,"","");
                                 myRef.child("allusers").child("User").child(uid).setValue(m);
 
                             }else {
-                                String exx="";
-                                if (prog1.isChecked()){exx=exx+""+prog1.getText().toString();}
-                                if (prog2.isChecked()){exx=exx+","+prog2.getText().toString();}
-                                if (prog3.isChecked()){exx=exx+","+prog3.getText().toString();}
-                                if (prog4.isChecked()){exx=exx+","+prog4.getText().toString();}
-                                if (prog5.isChecked()){exx=exx+","+prog5.getText().toString();}
-                                m =new Module(id,Name.getText().toString(),password.getText().toString(),email.getText().toString(),typ,exx,other.getText().toString());
+                                String exp="";
+                                if (prog11.isChecked()){exp=exp+""+prog11.getText().toString();}
+                                if (prog12.isChecked()){exp=exp+","+prog12.getText().toString();}
+                                if (prog13.isChecked()){exp=exp+","+prog13.getText().toString();}
+                                if (prog14.isChecked()){exp=exp+","+prog14.getText().toString();}
+                                if (prog15.isChecked()){exp=exp+","+prog15.getText().toString();}
+                                if (prog16.isChecked()){exp=exp+","+prog16.getText().toString();}
+                                if (prog17.isChecked()){exp=exp+","+prog17.getText().toString();}
+
+                                if (prog21.isChecked()){exp=exp+""+prog21.getText().toString();}
+                                if (prog22.isChecked()){exp=exp+","+prog22.getText().toString();}
+                                if (prog23.isChecked()){exp=exp+","+prog23.getText().toString();}
+                                if (prog24.isChecked()){exp=exp+","+prog24.getText().toString();}
+                                if (prog25.isChecked()){exp=exp+","+prog25.getText().toString();}
+
+                                if (prog1.isChecked()){exp=exp+""+prog1.getText().toString();}
+                                if (prog2.isChecked()){exp=exp+","+prog2.getText().toString();}
+                                if (prog3.isChecked()){exp=exp+","+prog3.getText().toString();}
+                                if (prog4.isChecked()){exp=exp+","+prog4.getText().toString();}
+                                if (prog5.isChecked()){exp=exp+","+prog5.getText().toString();}
+                                if (prog6.isChecked()){exp=exp+","+prog6.getText().toString();}
+                                if (prog7.isChecked()){exp=exp+","+prog7.getText().toString();}
+                                m =new Module(id,Name.getText().toString(),password.getText().toString(),email.getText().toString(),typ,exp,other.getText().toString());
                                 myRef.child("allusers").child("Expert").child(uid).setValue(m);
                             }
 
@@ -238,7 +304,6 @@ public class Register_to_app extends AppCompatActivity implements View.OnClickLi
         // if(ag)
         return true;
     }//data checked
-
 
     @Override
     public void onClick(View view) {
