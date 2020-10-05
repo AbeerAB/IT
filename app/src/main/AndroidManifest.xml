@@ -10,9 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".Add_Question_Activity"
+            android:label="@string/title_activity_add__question_"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".CommentActivity"
+            android:label="@string/title_activity_comment"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".CustomerQuestionsActivity"
             android:label="@string/title_activity_customer_questions"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ExpertAnswersActivity"
             android:label="@string/title_activity_expert_answers"

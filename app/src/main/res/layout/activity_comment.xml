@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CommentActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        app:title="إضافة إجابة"
+        app:titleMarginStart="160dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/bottom"/>
+
+    <RelativeLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#fff"
+        android:padding="4dp">
+
+
+        <EditText
+            android:id="@+id/add_comment"
+            android:layout_width="352dp"
+            android:layout_height="67dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#FFFFFF"
+            android:gravity="start"
+            android:hint="أنقر لإضافة إجابة"
+            android:textSize="30dp"
+            android:inputType="textMultiLine|textCapSentences"
+            android:minHeight="30dp"
+            android:padding="10dp"
+            android:layout_centerVertical="true"
+            android:shadowColor="#7BC4C7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints"
+            />
+
+        <TextView
+            android:id="@+id/post"
+            android:layout_width="94dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="30dp"
+            android:text="إجابة"
+            android:textColor="#1A82D5"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            />
+
+
+    </RelativeLayout>
+    <!---   <include layout="@layout/content_add__answer" /> -->
+
+
+</RelativeLayout>

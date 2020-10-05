@@ -43,7 +43,8 @@
     <string name="title_activity_my_answers">إجابات الخبراء</string>
     <string name="title_activity_expert_answers">إجابات الخبراء</string>
     <string name="title_activity_customer_questions">أسئلة العملاء</string>
-
+    <string name="title_activity_comment">CommentActivity</string>
+    <string name="title_activity_add__question_">Add_Question_Activity</string>
 
 
 </resources>

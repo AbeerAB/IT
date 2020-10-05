@@ -37,8 +37,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent add = new Intent(MainActivity.this, Add_Question_Activity.class);
+                startActivity(add);
             }
         });
 
@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Intent home = new Intent(MainActivity.this, CustomerQuestionsActivity.class);
                 startActivity(home); break;
             case R.id.nav_out:
-                Intent logout = new Intent(MainActivity.this, Register_to_app.class);
+                Intent logout = new Intent(MainActivity.this, CommentActivity.class);
                 startActivity(logout); break;
         }
         drawerLayout.closeDrawer(GravityCompat.START);
