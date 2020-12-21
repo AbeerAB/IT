@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/click_row"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   android:gravity="top"
+    android:layout_margin="@dimen/_7sdp"
+
+    android:orientation="horizontal"
+   >
+
+
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_10sdp"
+    >
+    <ImageView
+        android:id="@+id/delete"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:src="@drawable/delete"
+        android:layout_gravity="left|center"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+
+        android:layout_marginBottom="@dimen/_18sdp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:layoutDirection="rtl"
+               android:layout_marginLeft="@dimen/_5sdp"
+               >
+               <de.hdodenhof.circleimageview.CircleImageView
+                   android:layout_width="@dimen/_50sdp"
+                   android:layout_height="@dimen/_50sdp"
+                   android:layout_marginTop="@dimen/_5sdp"
+                   android:layout_marginBottom="@dimen/_5sdp"
+                   android:id="@+id/user_icon"
+                   android:src="@drawable/user_empty"
+                   android:layout_gravity="center"
+                   android:layout_marginRight="@dimen/_10sdp"
+                   />
+
+
+               <TextView
+                   android:id="@+id/username"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="@dimen/_5sdp"
+                   android:gravity="start"
+                   android:padding="@dimen/_5sdp"
+                   android:layout_gravity="center"
+                   android:text="Username"
+                   android:textColor="#000"
+                   android:layout_alignParentRight="true"
+
+                   android:textSize="16sp"
+                   android:textStyle="bold" />
+           </LinearLayout>
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:gravity="start"
+                android:layout_alignParentLeft="true"
+                android:padding="@dimen/_5sdp"
+                android:textColor="#000"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_8sdp"
+            >
+
+            <TextView
+                android:textStyle="bold"
+                android:id="@+id/qa_titel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:text="Start Chat"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15sp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+
+                android:layout_marginTop="@dimen/_10sdp"
+
+                >
+                <TextView
+                    android:textStyle="bold"
+                    android:id="@+id/qa_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:layout_gravity="center"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/_7sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:text="0"
+                    android:textColor="#000000"
+                    />
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:id="@+id/count_titel"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:text="عدد الأجوبة"
+                    android:textColor="#000000"
+                    />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <CheckBox
+                        android:id="@+id/like"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_alignParentTop="true"
+                        android:background="@drawable/checkbox_selector"
+                        android:button="@null"
+                        android:textColor="#000000" />
+                    <TextView
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:id="@+id/count_likes"
+                        android:layout_alignParentRight="true"
+                        android:text="0"
+                        android:layout_gravity="center"
+                        android:textColor="#000000"
+                        />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+</LinearLayout>

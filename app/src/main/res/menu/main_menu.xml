@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="@string/home" />
+
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_baseline_person_24"
+            android:title="الملف الشخصي" />
+
+
+        <item
+            android:id="@+id/nav_MyQuestion"
+            android:icon="@drawable/ic_baseline_contact_support_24"
+            android:title="أسئلتي" />
+
+        <!--<item-->
+            <!--android:id="@+id/nav_ExpAnswer"-->
+            <!--android:icon="@drawable/ic_baseline_question_answer_24"-->
+            <!--android:title="إجابات الخبراء" />-->
+
+        <item
+            android:id="@+id/nav_SeekerQuestions"
+            android:icon="@drawable/ic_baseline_people_24"
+            android:title="أسئلة العملاء" />
+
+
+    </group>
+
+    <item android:title="Other">
+
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_out"
+                    android:icon="@drawable/logout"
+                    android:title="تسجيل الخروج" />
+            </group>
+        </menu>
+    </item>
+
+
+</menu>
